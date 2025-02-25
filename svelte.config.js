@@ -12,7 +12,7 @@ const config = {
 		// If your environment is not supported, or you settled on a specific environment, switch out the adapter.
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
-			runtime: 'nodejs18.x' // Spécifie explicitement la version Node.js
+			runtime: 'edge' // Changement de nodejs18.x à edge
 		}),
 		alias: {
 			$lib: './src/lib'
