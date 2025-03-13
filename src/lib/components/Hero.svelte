@@ -121,7 +121,7 @@
       </div>
       <div class="feature-block">
         <div class="feature-label">TRANSPARENT & SECURE FUND MANAGEMENT</div>
-        <h2>Powered by <span class="highlight">Lagoon</span></h2>
+        <h2>Powered by <a href="https://lagoon.finance/" target="_blank" rel="noopener noreferrer" class="highlight">Lagoon</a></h2>
         <p class="feature-description">Leveraging Lagoon built on top of Safe, we provide robust, transparent, and secure vault management</p>
       </div>
     </div>
@@ -150,12 +150,6 @@
           <div class="social-links">
             <a href="https://x.com/DeTrade" target="_blank" rel="noopener noreferrer" class="social-link" title="X">
               <img src="/x.png" alt="X" class="social-icon" />
-            </a>
-            <a href="https://linkedin.com/company/detrade" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
-              <img src="/linkedin.png" alt="LinkedIn" class="social-icon" />
-            </a>
-            <a href="https://medium.com/detrade" target="_blank" rel="noopener noreferrer" class="social-link" title="Medium">
-              <img src="/medium.png" alt="Medium" class="social-icon" />
             </a>
           </div>
         </div>
@@ -1075,5 +1069,35 @@
   
     a {
       text-decoration: none;
+    }
+  
+    /* Ajout des styles pour le lien Lagoon */
+    h2 a.highlight {
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+  
+    h2 a.highlight:hover {
+      text-shadow: 
+        0 0 30px rgba(77, 168, 255, 0.6),
+        0 0 50px rgba(77, 168, 255, 0.5),
+        0 0 70px rgba(77, 168, 255, 0.4);
+    }
+  
+    h2 a.highlight::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+  
+    h2 a.highlight:hover::after {
+      transform: scaleX(1);
     }
   </style> 
