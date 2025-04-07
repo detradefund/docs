@@ -153,6 +153,38 @@
     }
   }
 
+  // Fonction pour fermer la sidebar
+  function closeSidebar() {
+    if (window.innerWidth <= 1024) {
+      sidebarOpen.set(false);
+    }
+  }
+
+  // Modification des gestionnaires de clic
+  async function handleMainLinkClick(section) {
+    // Ouvrir le menu déroulant d'abord
+    switch(section.title) {
+      case "Guides":
+        guidesOpen = true;
+        break;
+      case "Framework":
+        frameworkOpen = true;
+        break;
+      case "Vaults":
+        vaultsOpen = true;
+        break;
+      case "Security":
+        securityOpen = true;
+        break;
+      case "FAQ":
+        faqOpen = true;
+        break;
+    }
+    // Naviguer vers la page et fermer la sidebar
+    await goto(section.href);
+    closeSidebar();
+  }
+
   onMount(() => {
     // Vérification initiale
     checkWidth();
@@ -169,7 +201,11 @@
 
 <nav class="sidebar" class:open={$sidebarOpen}>
   <div class="back-to-app">
-    <a href="https://app.detrade.fund" class="nav-link">
+    <a 
+      href="https://app.detrade.fund" 
+      class="nav-link"
+      on:click={() => closeSidebar()}
+    >
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
       </svg>
@@ -201,28 +237,7 @@
             <a 
               href={section.href} 
               class="nav-link main-link"
-              on:click|preventDefault={async () => {
-                // Ouvrir le menu déroulant d'abord
-                switch(section.title) {
-                  case "Guides":
-                    guidesOpen = true;
-                    break;
-                  case "Framework":
-                    frameworkOpen = true;
-                    break;
-                  case "Vaults":
-                    vaultsOpen = true;
-                    break;
-                  case "Security":
-                    securityOpen = true;
-                    break;
-                  case "FAQ":
-                    faqOpen = true;
-                    break;
-                }
-                // Puis naviguer vers la page
-                await goto(section.href);
-              }}
+              on:click|preventDefault={() => handleMainLinkClick(section)}
             >
               {@html section.icon}
               {section.title}
@@ -286,6 +301,7 @@
                 href={subItem.href} 
                 class="nav-link sub-nav-link"
                 class:active={$page.url.pathname + $page.url.hash === subItem.href}
+                on:click={() => closeSidebar()}
               >
                 {subItem.title}
               </a>
@@ -297,6 +313,10 @@
           href={section.href} 
           class="nav-link"
           class:active={$page.url.pathname === section.href}
+          on:click|preventDefault={async () => {
+            await goto(section.href);
+            closeSidebar();
+          }}
         >
           {@html section.icon}
           {section.title}

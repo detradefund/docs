@@ -390,47 +390,69 @@
   @media (max-width: 768px) {
     .content {
       padding: 1rem;
+      text-align: center;
     }
 
     .title-container {
       margin-bottom: 2rem;
+      text-align: center;
     }
 
     h1 {
-      font-size: 2.25rem;
+      font-size: 2rem;
+      justify-content: center;
     }
 
     h2 {
       font-size: 1.5rem;
       margin-bottom: 1.75rem;
+      justify-content: center;
     }
 
     .overview-description {
-      font-size: 1.1rem;
-    }
-
-    p {
       font-size: 1rem;
+      text-align: center;
     }
 
     .feature-card {
       padding: 1.25rem;
+      text-align: center;
     }
 
-    .terms-grid {
+    .feature-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .feature-content p {
+      text-align: center;
+    }
+
+    .terminology-grid {
       grid-template-columns: 1fr;
     }
 
-    .term-card {
+    .term-box {
       padding: 1.25rem;
+      text-align: center;
     }
 
-    .term-card h3 {
-      font-size: 1.3rem;
+    .term-box h3 {
+      font-size: 1.2rem;
+      text-align: center;
     }
 
-    .divider {
-      margin: 2rem 0;
+    .term-box p {
+      text-align: center;
+    }
+
+    .image-caption {
+      text-align: center;
+    }
+
+    .architecture-diagram {
+      margin: 1rem auto;
     }
   }
 

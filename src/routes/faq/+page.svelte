@@ -477,14 +477,61 @@
   @media (max-width: 768px) {
     .content {
       padding: 1rem;
+      text-align: center;
+    }
+
+    .title-container {
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     h1 {
       font-size: 2rem;
+      justify-content: center;
     }
 
     h2 {
-      font-size: 1.5rem;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .overview-description {
+      text-align: center;
+    }
+
+    .toggle-button {
+      text-align: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .toggle-button span {
+      text-align: center;
+      width: 100%;
+    }
+
+    .toggle-content {
+      text-align: center;
+    }
+
+    .toggle-content p {
+      text-align: center;
+    }
+
+    .toggle-content ul {
+      text-align: left; /* Garder la liste alignée à gauche pour la lisibilité */
+      padding-left: 2rem;
+    }
+
+    .note {
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .faq-section {
+      text-align: center;
     }
   }
 

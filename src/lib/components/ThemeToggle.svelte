@@ -60,6 +60,14 @@
   .theme-switch {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    .theme-switch:not(:first-of-type) {
+      display: none;
+    }
   }
 
   .theme-toggle {

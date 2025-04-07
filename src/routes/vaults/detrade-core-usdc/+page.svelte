@@ -183,11 +183,18 @@
 </div>
 
 <style>
+  :global(body) {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
   .content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     color: var(--text-color);
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .vault-header {
@@ -434,16 +441,96 @@
   @media (max-width: 768px) {
     .content {
       padding: 1rem;
+      text-align: center;
+      width: 100%;
+      overflow-x: hidden;
     }
 
-    section {
-      padding: 1.5rem;
+    .vault-header {
+      text-align: center;
     }
 
-    .address-item {
+    h1 {
+      font-size: 2rem;
+      justify-content: center;
+    }
+
+    .vault-badges {
+      justify-content: center;
+    }
+
+    h2, h3, h4 {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .strategy-description {
+      text-align: center;
+    }
+
+    .strategy-card {
+      text-align: center;
+    }
+
+    .info-box p {
+      text-align: center;
+    }
+
+    .fees-overview {
+      text-align: center;
+    }
+
+    .fee-item {
       flex-direction: column;
-      align-items: flex-start;
       gap: 0.5rem;
+    }
+
+    .contract-card {
+      text-align: center;
+    }
+
+    .label {
+      text-align: center;
+    }
+
+    .address-container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+
+    .strategies-grid,
+    .contracts-list {
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
+
+    .strategy-card,
+    .contract-card {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .address code {
+      word-break: break-all;
+      max-width: 100%;
+    }
+
+    .contracts-section {
+      padding: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .vault-header,
+    .vault-objective,
+    .fees-section,
+    .info-box {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      padding: 1rem;
     }
   }
 

@@ -71,7 +71,7 @@
         <path d="M12 13v8"/>
         <path d="M8 21h8"/>
       </svg>
-      What Are DeTrade Vaults?
+      Vaults
     </h1>
     <p class="overview-description">DeTrade Vaults are smart contract-based investment strategies designed to grow your crypto assets without speculation.</p>
   </div>
@@ -326,16 +326,59 @@
   }
 
   @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
+    .content {
+      padding: 1rem;
+      text-align: center;
     }
 
-    .vaults-grid {
-      grid-template-columns: 1fr;
+    .title-container {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      justify-content: center;
+    }
+
+    h2 {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .overview-description {
+      text-align: center;
     }
 
     .info-box {
-      padding: 1.25rem;
+      text-align: center;
+    }
+
+    .info-box h2 {
+      text-align: center;
+    }
+
+    .info-box p {
+      text-align: center;
+    }
+
+    .info-box ul {
+      text-align: left;
+    }
+
+    .vault-card {
+      text-align: center;
+    }
+
+    .vault-header {
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .vault-footer {
+      flex-direction: column;
+      gap: 0.5rem;
     }
   }
 </style> 

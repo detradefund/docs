@@ -275,18 +275,54 @@
   @media (max-width: 768px) {
     .content {
       padding: 1rem;
+      text-align: center;
+    }
+
+    .title-container {
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     h1 {
       font-size: 2rem;
+      justify-content: center;
     }
 
     h2 {
-      font-size: 1.3rem;
+      text-align: center;
+      justify-content: center;
     }
 
-    h3 {
-      font-size: 1.1rem;
+    .overview-description {
+      text-align: center;
+    }
+
+    .risk-section {
+      text-align: center;
+    }
+
+    .risk-section p {
+      text-align: center;
+    }
+
+    .risk-card {
+      text-align: center;
+    }
+
+    .risk-card h3 {
+      text-align: center;
+    }
+
+    .risk-card p {
+      text-align: center;
+    }
+
+    .note {
+      text-align: center;
+    }
+
+    .audit-card {
+      text-align: center;
     }
 
     .risk-cards-grid {

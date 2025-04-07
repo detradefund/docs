@@ -458,12 +458,56 @@
   }
 
   @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5rem;
+    .content {
+      padding: 1rem;
+      text-align: center;
     }
 
-    h2 {
-      font-size: 1.75rem;
+    .title-container {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      justify-content: center;
+    }
+
+    h2, h3, h4 {
+      text-align: center;
+      justify-content: center;
+    }
+
+    .overview-description {
+      text-align: center;
+    }
+
+    .guide-note {
+      text-align: center;
+    }
+
+    .step {
+      text-align: center;
+    }
+
+    .step h4 {
+      justify-content: center;
+    }
+
+    .step p {
+      text-align: center;
+    }
+
+    .info-box {
+      text-align: center;
+    }
+
+    .info-box h4 {
+      justify-content: center;
+    }
+
+    .info-box p {
+      text-align: center;
     }
 
     .steps-grid {

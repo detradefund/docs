@@ -46,7 +46,13 @@
       'meta[property="og:title"]': title,
       'meta[property="og:description"]': description,
       'meta[name="twitter:title"]': title,
-      'meta[name="twitter:description"]': description
+      'meta[name="twitter:description"]': description,
+      'meta[property="og:image"]': '/banner.webp',
+      'meta[property="og:image:type"]': 'image/webp',
+      'meta[property="og:image:width"]': '1200',
+      'meta[property="og:image:height"]': '630',
+      'meta[name="twitter:card"]': 'summary_large_image',
+      'meta[name="twitter:image"]': '/banner.webp'
     };
 
     Object.entries(metaTags).forEach(([selector, content]) => {
@@ -69,6 +75,14 @@
     currentHash === 'vision' ? 
     "Understand DeTrade's vision for delivering optimized returns through diversified DeFi strategies." :
     $page.data.description} />
+  
+  <meta property="og:image" content="/banner.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="/banner.webp" />
   
   <meta property="og:title" content={currentHash === 'simplify' ? 'Simplify Your DeFi Journey – DeTrade' : 
           currentHash === 'expertise' ? 'Expertise You Can Trust – DeTrade' :
@@ -252,14 +266,31 @@
 
     h1 {
       font-size: 2rem;
+      justify-content: center;
+    }
+
+    .title-container {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
     }
 
     .overview-description {
       font-size: 1rem;
+      text-align: center;
+    }
+
+    .feature-card {
+      text-align: center;
+    }
+
+    .feature-card h2 {
+      text-align: center;
     }
 
     p {
       font-size: 1rem;
+      text-align: center;
     }
   }
 
