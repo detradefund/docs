@@ -5,7 +5,7 @@
 	],
 	"handler": ".svelte-kit/vercel-tmp/index.js",
 	"launcherType": "Nodejs",
-	"experimentalResponseStreaming": false,
+	"experimentalResponseStreaming": true,
 	"framework": {
 		"slug": "sveltekit",
 		"version": "2.20.4"

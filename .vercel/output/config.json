@@ -11,60 +11,32 @@
 			"handle": "filesystem"
 		},
 		{
-			"src": "^/?$",
-			"dest": "/__root__?__pathname=/"
+			"src": "^/?(?:/__data.json)?$",
+			"dest": "/"
 		},
 		{
-			"src": "^/?/__data.json$",
-			"dest": "/__root__/__data.json?__pathname=/"
+			"src": "^/faq/?(?:/__data.json)?$",
+			"dest": "/faq"
 		},
 		{
-			"src": "^/faq/?$",
-			"dest": "/faq?__pathname=/faq"
+			"src": "^/framework/?(?:/__data.json)?$",
+			"dest": "/framework"
 		},
 		{
-			"src": "^/faq/?/__data.json$",
-			"dest": "/faq/__data.json?__pathname=/faq"
+			"src": "^/guides/?(?:/__data.json)?$",
+			"dest": "/guides"
 		},
 		{
-			"src": "^/framework/?$",
-			"dest": "/framework?__pathname=/framework"
+			"src": "^/security/?(?:/__data.json)?$",
+			"dest": "/security"
 		},
 		{
-			"src": "^/framework/?/__data.json$",
-			"dest": "/framework/__data.json?__pathname=/framework"
+			"src": "^/vaults/?(?:/__data.json)?$",
+			"dest": "/vaults"
 		},
 		{
-			"src": "^/guides/?$",
-			"dest": "/guides?__pathname=/guides"
-		},
-		{
-			"src": "^/guides/?/__data.json$",
-			"dest": "/guides/__data.json?__pathname=/guides"
-		},
-		{
-			"src": "^/security/?$",
-			"dest": "/security?__pathname=/security"
-		},
-		{
-			"src": "^/security/?/__data.json$",
-			"dest": "/security/__data.json?__pathname=/security"
-		},
-		{
-			"src": "^/vaults/?$",
-			"dest": "/vaults?__pathname=/vaults"
-		},
-		{
-			"src": "^/vaults/?/__data.json$",
-			"dest": "/vaults/__data.json?__pathname=/vaults"
-		},
-		{
-			"src": "^/vaults/detrade-core-usdc/?$",
-			"dest": "/vaults/detrade-core-usdc?__pathname=/vaults/detrade-core-usdc"
-		},
-		{
-			"src": "^/vaults/detrade-core-usdc/?/__data.json$",
-			"dest": "/vaults/detrade-core-usdc/__data.json?__pathname=/vaults/detrade-core-usdc"
+			"src": "^/vaults/detrade-core-usdc/?(?:/__data.json)?$",
+			"dest": "/vaults/detrade-core-usdc"
 		},
 		{
 			"src": "/.*",
