@@ -11,7 +11,11 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter({
 			runtime: 'nodejs20.x',
-			split: false
+			split: false,
+			regions: ['cdg1'],
+			isr: {
+				expiration: false
+			}
 		}),
 		alias: {
 			$lib: './src/lib'

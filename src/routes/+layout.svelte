@@ -11,6 +11,7 @@
 <svelte:head>
   <title>{$page.data.title || 'Documentation'}</title>
   <meta name="description" content={$page.data.description || 'Documentation'} />
+  <link rel="icon" type="image/png" href="/logo-detrade.png" />
 </svelte:head>
 
 <div class="layout" class:sidebar-closed={!$sidebarOpen}>
