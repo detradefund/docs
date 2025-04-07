@@ -49,12 +49,16 @@
       'meta[property="og:description"]': description,
       'meta[name="twitter:title"]': title,
       'meta[name="twitter:description"]': description,
-      'meta[property="og:image"]': '/banner.webp',
+      'meta[property="og:image"]': 'https://docs.detrade.fund/banner.webp',
       'meta[property="og:image:type"]': 'image/webp',
       'meta[property="og:image:width"]': '1200',
       'meta[property="og:image:height"]': '630',
       'meta[name="twitter:card"]': 'summary_large_image',
-      'meta[name="twitter:image"]': '/banner.webp'
+      'meta[name="twitter:image"]': 'https://docs.detrade.fund/banner.webp',
+      'meta[name="theme-color"]': '#0d111c',
+      'meta[property="og:site_name"]': 'DeTrade Documentation',
+      'meta[property="og:type"]': 'website',
+      'meta[property="og:url"]': 'https://docs.detrade.fund/'
     };
 
     Object.entries(metaTags).forEach(([selector, content]) => {
@@ -78,13 +82,18 @@
     "Understand DeTrade's vision for delivering optimized returns through diversified DeFi strategies." :
     $page.data.description} />
   
-  <meta property="og:image" content="/banner.webp" />
+  <meta property="og:image" content="https://docs.detrade.fund/banner.webp" />
   <meta property="og:image:type" content="image/webp" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/banner.webp" />
+  <meta name="twitter:image" content="https://docs.detrade.fund/banner.webp" />
+  
+  <meta name="theme-color" content="#0d111c" />
+  <meta property="og:site_name" content="DeTrade – Documentation" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://docs.detrade.fund/" />
   
   <meta property="og:title" content={currentHash === 'simplify' ? 'Simplify Your DeFi Journey – DeTrade' : 
           currentHash === 'expertise' ? 'Expertise You Can Trust – DeTrade' :
