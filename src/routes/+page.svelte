@@ -1,6 +1,5 @@
 <script lang="ts">
-  import type { onMount } from 'svelte';
-  import type { Page } from '@sveltejs/kit';
+  import { onMount } from 'svelte';
   import { page } from '$app/stores';
 
   let currentHash = '';
@@ -8,13 +7,15 @@
   onMount(() => {
     currentHash = window.location.hash.slice(1);
     
-    window.addEventListener('hashchange', () => {
+    const handleHashChange = () => {
       currentHash = window.location.hash.slice(1);
       updateMetaTags();
-    });
+    };
+
+    window.addEventListener('hashchange', handleHashChange);
 
     return () => {
-      window.removeEventListener('hashchange', () => {});
+      window.removeEventListener('hashchange', handleHashChange);
     };
   });
 
