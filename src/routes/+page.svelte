@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import type { onMount } from 'svelte';
+  import type { Page } from '@sveltejs/kit';
   import { page } from '$app/stores';
 
   let currentHash = '';
