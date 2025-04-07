@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/logo-detrade.png" />
+		<link rel="icon" href="/logo-detrade.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +27,16 @@
 				box-sizing: border-box;
 			}
 		</style>
+		<script>
+			// Vérifie le thème sauvegardé et l'applique immédiatement
+			const savedTheme = localStorage.getItem('theme');
+			// Si aucun thème n'est sauvegardé, on utilise le mode clair par défaut
+			if (!savedTheme || savedTheme === 'light') {
+				document.documentElement.classList.add('dark-mode');
+			} else {
+				document.documentElement.classList.remove('dark-mode');
+			}
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">

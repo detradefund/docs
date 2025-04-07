@@ -1,31 +1,52 @@
-# sv
+# Code Documentation Platform
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern documentation platform built with SvelteKit, designed to provide clear and interactive code documentation.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- 📚 Interactive code documentation
+- 🎨 Syntax highlighting
+- 📱 Responsive sidebar navigation
+- 🔍 Easy-to-use interface
+- 🎯 Framework-specific guides
+- ❓ FAQ section
+
+## Getting Started
+
+First, install the dependencies:
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install
+# or
+pnpm install
+# or
+yarn install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Then, run the development server:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# or
+pnpm dev
+# or
+yarn dev
 ```
 
-## Building
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
+
+## Project Structure
+
+```
+├── src/
+│   ├── lib/
+│   │   ├── components/    # Reusable components
+│   │   └── stores/        # Svelte stores
+│   ├── routes/           # Application routes
+│   └── app.css          # Global styles
+```
+
+## Building for Production
 
 To create a production version of your app:
 
@@ -33,6 +54,16 @@ To create a production version of your app:
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+npm run preview
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
