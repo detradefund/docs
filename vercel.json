@@ -1,1 +1,5 @@
-// Supprimer ce fichier complètement 
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "framework": "sveltekit"
+} 
