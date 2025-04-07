@@ -1,3 +1,11 @@
 {
-	"/": []
+	"/": [
+		"src/routes/+page.ts"
+	],
+	"/faq": [],
+	"/framework": [],
+	"/guides": [],
+	"/security": [],
+	"/vaults": [],
+	"/vaults/detrade-core-usdc": []
 }
