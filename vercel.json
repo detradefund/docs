@@ -3,10 +3,5 @@
   "devCommand": "npm run dev",
   "framework": "sveltekit",
   "installCommand": "npm install",
-  "outputDirectory": ".vercel/output",
-  "functions": {
-    "api/*.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "outputDirectory": ".vercel/output"
 } 
