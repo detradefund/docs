@@ -1,52 +1,31 @@
-# Code Documentation Platform
+# sv
 
-A modern documentation platform built with SvelteKit, designed to provide clear and interactive code documentation.
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
-## Features
+## Creating a project
 
-- 📚 Interactive code documentation
-- 🎨 Syntax highlighting
-- 📱 Responsive sidebar navigation
-- 🔍 Easy-to-use interface
-- 🎯 Framework-specific guides
-- ❓ FAQ section
-
-## Getting Started
-
-First, install the dependencies:
+If you're seeing this, you've probably already done this step. Congrats!
 
 ```bash
-npm install
-# or
-pnpm install
-# or
-yarn install
+# create a new project in the current directory
+npx sv create
+
+# create a new project in my-app
+npx sv create my-app
 ```
 
-Then, run the development server:
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
 npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
 ```
 
-Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
-
-## Project Structure
-
-```
-├── src/
-│   ├── lib/
-│   │   ├── components/    # Reusable components
-│   │   └── stores/        # Svelte stores
-│   ├── routes/           # Application routes
-│   └── app.css          # Global styles
-```
-
-## Building for Production
+## Building
 
 To create a production version of your app:
 
@@ -54,16 +33,6 @@ To create a production version of your app:
 npm run build
 ```
 
-You can preview the production build with:
+You can preview the production build with `npm run preview`.
 
-```bash
-npm run preview
-```
-
-## Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
