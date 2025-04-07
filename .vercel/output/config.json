@@ -11,8 +11,36 @@
 			"handle": "filesystem"
 		},
 		{
+			"src": "^/?(?:/__data.json)?$",
+			"dest": "/"
+		},
+		{
+			"src": "^/faq/?(?:/__data.json)?$",
+			"dest": "/faq"
+		},
+		{
+			"src": "^/framework/?(?:/__data.json)?$",
+			"dest": "/framework"
+		},
+		{
+			"src": "^/guides/?(?:/__data.json)?$",
+			"dest": "/guides"
+		},
+		{
+			"src": "^/security/?(?:/__data.json)?$",
+			"dest": "/security"
+		},
+		{
+			"src": "^/vaults/?(?:/__data.json)?$",
+			"dest": "/vaults"
+		},
+		{
+			"src": "^/vaults/detrade-core-usdc/?(?:/__data.json)?$",
+			"dest": "/vaults/detrade-core-usdc"
+		},
+		{
 			"src": "/.*",
-			"dest": "/fn"
+			"dest": "/![-]/catchall"
 		}
 	],
 	"overrides": {}
