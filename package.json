@@ -27,5 +27,8 @@
 		"estree-walker": "^3.0.0"
 	},
 	"dependencies": {
+	},
+	"engines": {
+		"node": "18.x"
 	}
 }
