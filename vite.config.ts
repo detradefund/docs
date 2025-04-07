@@ -6,5 +6,8 @@ export default defineConfig({
 	server: {
 		port: 3000,
 		strictPort: true // Empêche Vite d'utiliser un autre port si 3000 est occupé
+	},
+	build: {
+		target: 'esnext'
 	}
 }); 
