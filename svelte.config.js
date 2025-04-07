@@ -12,7 +12,10 @@ const config = {
 		adapter: adapter({
 			runtime: 'nodejs20.x',
 			split: false
-		})
+		}),
+		alias: {
+			$lib: './src/lib'
+		}
 	},
 	preprocess: vitePreprocess()
 };

@@ -3,17 +3,18 @@
 
 declare global {
 	namespace App {
-		// interface Error {}
-		// interface Locals {}
+		interface Error {}
+		interface Locals {}
 		interface PageData {
 			title: string;
 			description: string;
 		}
-		// interface Platform {}
+		interface Platform {}
 	}
 
 	namespace svelteHTML {
 		interface HTMLAttributes<T> {
+			'on:click'?: (event: CustomEvent<any> & { target: EventTarget & T }) => void;
 			[key: string]: any;
 		}
 	}
