@@ -63,7 +63,7 @@
 
     <section id="oracle-design" class="risk-section">
       <h2>Oracle Design</h2>
-      <p>Unlike many DeFi systems that rely on automated price feeds, DeTrade has adopted a manual oracle system for computing and updating the Net Asset Value (NAV) of each vault — a key choice for security.</p>
+      <p>Unlike many DeFi systems that rely on automated price feeds, DeTrade has adopted a manual oracle system for computing and updating the Net Asset Value (NAV) of each vault — a key choice for security. <a href="/faq/#oracle">Learn more about our oracle system in the FAQ</a>.</p>
 
       <div class="risk-cards-grid">
         <div class="risk-card">
@@ -147,6 +147,33 @@
       </p>
     </section>
   </div>
+
+  <nav class="page-navigation">
+    <div class="nav-links-container">
+      <a href="/guides" class="nav-link prev no-arrow">
+        <div class="nav-content">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+          <div class="nav-text">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Guides</span>
+          </div>
+        </div>
+      </a>
+      <a href="/vaults" class="nav-link next">
+        <div class="nav-content">
+          <div class="nav-text">
+            <span class="nav-label">Next</span>
+            <span class="nav-title">Vaults</span>
+          </div>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </nav>
 </div>
 
 <style>
@@ -413,6 +440,118 @@
     background: var(--text-color);
     margin: 2rem 0;
     opacity: 0.1;
+  }
+
+  .page-navigation {
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+
+  .nav-links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: none;
+  }
+
+  .nav-link:hover {
+    background: var(--secondary-background);
+    transform: translateY(-2px);
+    transition: none;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-content svg {
+    color: currentColor;
+    stroke: currentColor;
+    transition: none;
+  }
+
+  .nav-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-label {
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+
+  .nav-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .prev .nav-content {
+    justify-content: flex-start;
+  }
+
+  .next .nav-content {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .next .nav-text {
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links-container {
+      grid-template-columns: 1fr;
+    }
+
+    .nav-content {
+      justify-content: center !important;
+    }
+
+    .nav-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center !important;
+    }
+
+    .prev svg {
+      margin-right: auto;
+    }
+
+    .next svg {
+      margin-left: auto;
+    }
+
+    .nav-link {
+      padding: 1rem;
+      position: relative;
+    }
+
+    .prev .nav-content,
+    .next .nav-content {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-label {
+      font-size: 0.8rem;
+    }
+
+    .nav-title {
+      font-size: 1rem;
+    }
   }
 </style>
 

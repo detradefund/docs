@@ -27,7 +27,10 @@ declare namespace svelteHTML {
 // Module declarations
 declare module "$app/stores" {
   import type { Readable } from 'svelte/store';
-  export const page: Readable<App.PageData>;
+  export const page: Readable<{
+    data: App.PageData;
+    [key: string]: any;
+  }>;
 }
 
 declare module "$app/environment" {

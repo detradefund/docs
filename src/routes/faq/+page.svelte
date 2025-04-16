@@ -357,6 +357,22 @@
       </div>
     </section>
   </div>
+
+  <nav class="page-navigation">
+    <div class="nav-links-container single">
+      <a href="/vaults" class="nav-link prev no-arrow">
+        <div class="nav-content">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+          <div class="nav-text">
+            <span class="nav-label">Previous</span>
+            <span class="nav-title">Vaults</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </nav>
 </div>
 
 <style>
@@ -590,5 +606,108 @@
     opacity: 0.7;
     margin: 0.5rem 0;
     line-height: 1.5;
+  }
+
+  .page-navigation {
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+
+  .nav-links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .nav-links-container.single {
+    grid-template-columns: 1fr;
+    max-width: 50%;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    background: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: none;
+  }
+
+  .nav-link:hover {
+    background: var(--secondary-background);
+    transform: translateY(-2px);
+    transition: none;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-content svg {
+    color: currentColor;
+    stroke: currentColor;
+    transition: none;
+  }
+
+  .nav-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-label {
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+
+  .nav-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .prev .nav-content {
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links-container.single {
+      max-width: 100%;
+    }
+
+    .nav-content {
+      justify-content: center !important;
+    }
+
+    .nav-text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center !important;
+    }
+
+    .prev svg {
+      margin-right: auto;
+    }
+
+    .nav-link {
+      padding: 1rem;
+      position: relative;
+    }
+
+    .prev .nav-content {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-label {
+      font-size: 0.8rem;
+    }
+
+    .nav-title {
+      font-size: 1rem;
+    }
   }
 </style> 

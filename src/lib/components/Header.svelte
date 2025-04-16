@@ -90,7 +90,7 @@
     display: none;
     background: none;
     border: none;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-color);
     cursor: pointer;
     padding: 0.5rem;
     margin-right: 1rem;
@@ -99,7 +99,7 @@
   }
 
   .menu-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--hover-background);
   }
 
   /* Styles pour mobile */
